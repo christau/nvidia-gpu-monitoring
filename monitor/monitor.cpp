@@ -12,7 +12,7 @@ int main(int argc, char **argv)
   const auto devices_begin = device_manager.devices_begin();
   const auto devices_end = device_manager.devices_end();
 
-  std::chrono::milliseconds timestamp;
+  //std::chrono::milliseconds timestamp;
   int size = 1;
   if (argc == 2)
     sscanf(argv[1], "%d", &size);
@@ -39,8 +39,8 @@ int main(int argc, char **argv)
         avg += values[i];
       }
       avg /= size;
-      timestamp = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now().time_since_epoch());
-      std::cout <<timestamp.count()<<"#"<< avg << std::endl;
+      //timestamp = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now().time_since_epoch());
+      std::cout << avg << std::endl;
       break;
     }
 
